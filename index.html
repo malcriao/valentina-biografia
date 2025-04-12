@@ -17,10 +17,9 @@
       color: white;
       text-align: center;
       padding: 2rem;
-      position: relative;
     }
     header img {
-      max-width: 300px;
+      width: 220px;
       border-radius: 20px;
     }
     nav {
@@ -63,7 +62,7 @@
       top: -50px;
       width: 40px;
       height: 40px;
-      background-image: url('https://img.icons8.com/emoji/48/000000/candy-emoji.png');
+      background-image: url('candy.png');
       background-size: cover;
       animation: fall linear infinite;
       z-index: 9999;
@@ -76,7 +75,7 @@
 </head>
 <body>
   <audio autoplay loop>
-    <source src="https://www.bensound.com/bensound-music/bensound-littleidea.mp3" type="audio/mp3">
+    <source src="musica.mp3" type="audio/mp3">
     Tu navegador no soporta audio HTML5.
   </audio>
 
@@ -100,8 +99,8 @@
     <h2>Galería de fotos</h2>
     <div class="galeria">
       <img src="valentina_real.jpg" alt="Valentina sonriendo">
-      <img src="https://via.placeholder.com/200x200?text=Foto+2" alt="Foto 2">
-      <img src="https://via.placeholder.com/200x200?text=Foto+3" alt="Foto 3">
+      <img src="foto_extra_1.jpg" alt="Foto extra 1">
+      <img src="foto_extra_2.jpg" alt="Foto extra 2">
     </div>
   </section>
 
@@ -129,12 +128,10 @@
       candy.style.left = Math.random() * window.innerWidth + 'px';
       candy.style.animationDuration = (Math.random() * 3 + 2) + 's';
       document.body.appendChild(candy);
-
       setTimeout(() => {
         candy.remove();
       }, 6000);
     }
-
     setInterval(crearCaramelo, 300);
   </script>
 </body>
