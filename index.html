@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Valentina Ignacia</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background-color: #ffe6f0;
+      color: #333;
+      overflow-x: hidden;
+    }
+    header {
+      background-color: #ff99cc;
+      color: white;
+      text-align: center;
+      padding: 2rem;
+      position: relative;
+    }
+    header img {
+      max-width: 300px;
+      border-radius: 20px;
+    }
+    nav {
+      background-color: #ff66b2;
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      padding: 1rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      padding: 2rem;
+    }
+    .bio {
+      background-color: #fff0f5;
+      border-radius: 15px;
+      padding: 1.5rem;
+    }
+    .galeria {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 1rem;
+    }
+    .galeria img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #ff99cc;
+      color: white;
+    }
+    .candy {
+      position: fixed;
+      top: -50px;
+      width: 40px;
+      height: 40px;
+      background-image: url('https://img.icons8.com/emoji/48/000000/candy-emoji.png');
+      background-size: cover;
+      animation: fall linear infinite;
+      z-index: 9999;
+    }
+    @keyframes fall {
+      0% { transform: translateY(0); }
+      100% { transform: translateY(120vh); }
+    }
+  </style>
+</head>
+<body>
+  <audio autoplay loop>
+    <source src="https://www.bensound.com/bensound-music/bensound-littleidea.mp3" type="audio/mp3">
+    Tu navegador no soporta audio HTML5.
+  </audio>
+
+  <header>
+    <img src="valentina_animada.png" alt="Valentina animada" />
+    <h1>Valentina Ignacia López Gamboa</h1>
+    <p>¡Bienvenida a mi mundo rosado y lleno de aventuras!</p>
+  </header>
+  <nav>
+    <a href="#biografia">Biografía</a>
+    <a href="#galeria">Galería</a>
+    <a href="#gustos">Lo que amo</a>
+  </nav>
+
+  <section id="biografia" class="bio">
+    <h2>Biografía</h2>
+    <p>Hola, me llamo Valentina Ignacia López Gamboa y nací el 3 de septiembre del 2019. Me encanta jugar con mis muñecas LOL, con cosas de Kuromi, tirarme por toboganes gigantes, nadar en piscinas enormes y jugar Roblox. Amo el color rosado y me gustaría tener un gatito algún día.</p>
+  </section>
+
+  <section id="galeria">
+    <h2>Galería de fotos</h2>
+    <div class="galeria">
+      <img src="valentina_real.jpg" alt="Valentina sonriendo">
+      <img src="https://via.placeholder.com/200x200?text=Foto+2" alt="Foto 2">
+      <img src="https://via.placeholder.com/200x200?text=Foto+3" alt="Foto 3">
+    </div>
+  </section>
+
+  <section id="gustos">
+    <h2>Mis cosas favoritas</h2>
+    <ul>
+      <li>💖 Kuromi</li>
+      <li>🧸 Máquinas de peluches</li>
+      <li>🏊 Piscinas grandes</li>
+      <li>🛝 Toboganes</li>
+      <li>👾 Roblox</li>
+      <li>🧁 Muñecas LOL</li>
+      <li>🐱 ¡Quiero un gatito!</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>Con mucho amor 💗 - Página hecha por su familia</p>
+  </footer>
+
+  <script>
+    function crearCaramelo() {
+      const candy = document.createElement('div');
+      candy.classList.add('candy');
+      candy.style.left = Math.random() * window.innerWidth + 'px';
+      candy.style.animationDuration = (Math.random() * 3 + 2) + 's';
+      document.body.appendChild(candy);
+
+      setTimeout(() => {
+        candy.remove();
+      }, 6000);
+    }
+
+    setInterval(crearCaramelo, 300);
+  </script>
+</body>
+</html>
